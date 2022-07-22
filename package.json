@@ -4,7 +4,7 @@
   "description": "Projet 3 Oh My Food",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
   },
   "author": "Le Faucheur Kevin",
   "license": "ISC"
