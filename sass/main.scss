@@ -1,16 +1,12 @@
-#geolocate, nav, section, footer {
+section, footer {
     background-color: aquamarine;
 }
-
-// .menu-card {
-//     background-color: orchid;
-// }
-/* ^^^ Temporaire ^^^ */
-
 /* CSS */
 * {
     margin: 0;
 }
+
+.hidden { display: none; }
 
 body {
     font-family: "Roboto", sans-serif;
@@ -24,7 +20,7 @@ body {
 header {
     position: relative;
     box-sizing: content-box;
-    box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 #return__icon {
@@ -43,4 +39,20 @@ a {
     color: black;
 }
 
-.hide { display: none; }
+// Section Locate
+#geolocate { 
+    background-color: #EAEAEA; 
+    height: 13vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#geolocate__icon {
+    margin-right: 4vw;
+    justify-self: flex-start;
+}
+
+#geolocate__text {
+    margin-right: 4vw;
+}
