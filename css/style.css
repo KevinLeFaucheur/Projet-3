@@ -1,12 +1,46 @@
-header, #geolocate, nav, section, footer {
+#geolocate, nav, section, footer {
   background-color: aquamarine;
 }
 
 /* ^^^ Temporaire ^^^ */
 /* CSS */
-body {
+* {
   margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
   text-align: center;
+}
+
+.shrikhand {
+  font-family: "Shrikhand", sans-serif;
+}
+
+header {
+  position: relative;
+  box-sizing: content-box;
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+#return__icon {
+  position: absolute;
+  left: 9%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 8vw;
+  padding: 3.5vw 0 1.5vw 0;
+}
+
+a {
+  color: black;
+}
+
+.hide {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
