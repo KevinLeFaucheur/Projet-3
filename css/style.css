@@ -67,4 +67,43 @@ nav {
   background-color: #F6F6F6;
 }
 
+#geolocate {
+  background-color: #EAEAEA;
+  height: 13vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#geolocate #geolocate__icon {
+  margin-right: 4vw;
+  justify-self: flex-start;
+}
+#geolocate #geolocate__text {
+  margin-right: 4vw;
+}
+
+nav {
+  padding: 9vw;
+}
+nav h2 {
+  padding: 2.3vw 4vw 1vw 4vw;
+}
+nav p {
+  padding: 2vw 0 2vw 0;
+  font-size: 4.8vw;
+  font-weight: 300;
+}
+nav .button {
+  padding: 4.5vw 5vw;
+  margin: 6vw 0;
+  color: white;
+  font-size: 4vw;
+  font-weight: 500;
+  background: #9356DC;
+  background: linear-gradient(0deg, #9356DC -20%, #FF79DA 120%);
+  border-style: none;
+  border-radius: 25px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.35);
+}
+
 /*# sourceMappingURL=style.css.map */
