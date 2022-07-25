@@ -1,58 +1,8 @@
-section, footer {
-    background-color: aquamarine;
-}
-/* CSS */
-* {
-    margin: 0;
-}
-
-.hidden { display: none; }
-
-body {
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-}
-
-.shrikhand {
-    font-family: "Shrikhand", sans-serif;
-}
-
-header {
-    position: relative;
-    box-sizing: content-box;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-}
-
-#return__icon {
-    position: absolute;
-    left: 9%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-h1 { 
-    font-size: 8vw; 
-    padding: 3.5vw 0 1.5vw 0;
-}
-
-a {
-    color: black;
-}
-
-// Section Locate
-#geolocate { 
-    background-color: #EAEAEA; 
-    height: 13vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#geolocate__icon {
-    margin-right: 4vw;
-    justify-self: flex-start;
-}
-
-#geolocate__text {
-    margin-right: 4vw;
-}
+// imports
+@import "./base/base";
+@import "./base/typography";
+@import "./utils/variables";
+@import "./utils/debug";
+@import "./layouts/footer";
+@import "./layouts/header";
+@import "./layouts/nav";

@@ -2,22 +2,25 @@ section, footer {
   background-color: aquamarine;
 }
 
-/* CSS */
-* {
-  margin: 0;
-}
-
-.hidden {
-  display: none;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
 }
 
-.shrikhand {
+.heading__font {
   font-family: "Shrikhand", sans-serif;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  text-align: left;
+  padding: 7vw;
+}
+
+#footer__list {
+  padding: 0;
+  list-style: none;
 }
 
 header {
@@ -31,6 +34,19 @@ header {
   left: 9%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+nav {
+  background-color: #F6F6F6;
+}
+
+/* CSS */
+* {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 h1 {
