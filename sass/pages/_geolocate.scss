@@ -1,16 +1,16 @@
 #geolocate { 
-    background-color: #EAEAEA; 
+    background-color: $geolocate-bg-color; 
     height: 13vw;
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-#geolocate__icon {
-    margin-right: 4vw;
-    justify-self: flex-start;
-}
+    #geolocate__icon {
+        margin-right: 4vw;
+        justify-self: flex-start;
+    }
 
-#geolocate__text {
-    margin-right: 4vw;
+    #geolocate__text {
+        margin-right: 4vw;
+    }
 }
