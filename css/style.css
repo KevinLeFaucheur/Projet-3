@@ -24,10 +24,6 @@ body {
   font-family: "Shrikhand", sans-serif;
 }
 
-section, footer {
-  background-color: aquamarine;
-}
-
 footer {
   background-color: #353535;
   color: white;
@@ -65,24 +61,6 @@ header {
 
 nav {
   background-color: #F6F6F6;
-}
-
-#geolocate {
-  background-color: #EAEAEA;
-  height: 13vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#geolocate #geolocate__icon {
-  margin-right: 4vw;
-  justify-self: flex-start;
-}
-#geolocate #geolocate__text {
-  margin-right: 4vw;
-}
-
-nav {
   padding: 9vw;
 }
 nav h2 {
@@ -104,6 +82,79 @@ nav .button {
   border-style: none;
   border-radius: 25px;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.35);
+}
+
+#geolocate {
+  background-color: #EAEAEA;
+  height: 13vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#geolocate #geolocate__icon {
+  margin-right: 4vw;
+  justify-self: flex-start;
+}
+#geolocate #geolocate__text {
+  margin-right: 4vw;
+}
+
+#how-to {
+  background-color: white;
+  padding: 5vw 5vw 13vw 5vw;
+  position: relative;
+}
+#how-to h2 {
+  text-align: left;
+  padding: 8vw 0;
+}
+#how-to .how-to__container {
+  padding: 6vw;
+  margin-left: 3vw;
+  margin-bottom: 7vw;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+}
+#how-to .how-to__container .how-to__number {
+  width: 3.6vw;
+  height: 3.6vw;
+  position: relative;
+  right: 9.5vw;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 5vw;
+  padding: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#how-to .how-to__container .how-to__icon {
+  color: #7E7E7E;
+  margin-right: 5vw;
+  position: relative;
+  right: 5vw;
+  font-size: 5vw;
+  display: flex;
+  align-items: center;
+}
+#how-to .how-to__container .how-to__icon--alt {
+  color: #9356DC;
+}
+#how-to .how-to__container .how-to__text {
+  position: relative;
+  right: 5vw;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+#how-to .how-to__container--alt {
+  background-color: #F5EDFF;
+}
+
+#menu {
+  background-color: #F6F6F6;
 }
 
 /*# sourceMappingURL=style.css.map */

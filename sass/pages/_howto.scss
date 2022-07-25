@@ -1,24 +1,60 @@
-nav {
-    padding: 9vw;
+#how-to {
+    background-color: white;
+    padding: 5vw 5vw 13vw 5vw;
+    position: relative;
+
     h2 {
-        padding: 2.3vw 4vw 1vw 4vw;
+        text-align: left;
+        padding: 8vw 0;
     }
-    p {
-        padding: 2vw 0 2vw 0;
-        font-size: 4.8vw;
-        font-weight: 300;
+
+    .how-to__container {
+        padding: 6vw;
+        margin-left: 3vw;
+        margin-bottom: 7vw;
+        background-color: $howto-bg-color;
+        border-radius: 20px;
+        display: flex;
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+
+        .how-to__number {
+            width: 3.6vw;
+            height: 3.6vw;
+            position: relative;
+            right: 9.5vw;
+            background-color: $color-primary;
+            color: white;
+            border-radius: 5vw;
+            padding: 1.5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .how-to__icon {
+            color: $howto-icon-color;
+            margin-right: 5vw;
+            position: relative;
+            right: 5vw;
+            font-size: 5vw;
+            display: flex;
+            align-items: center;
+        }
+
+        .how-to__icon--alt {
+            color: $color-primary;
+        }
+
+        .how-to__text {
+            position: relative;
+            right: 5vw;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
     }
-    .button {
-        padding: 4.5vw 5vw;
-        margin: 6vw 0;
-        color: white;
-        font-size: 4vw;
-        font-weight: 500;
-        background: $color-primary;
-        background: linear-gradient(0deg, $color-primary -20%, $color-secondary 120%);
-        border-style: none;
-        border-radius: 25px;
-        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.35);
+
+    .how-to__container--alt {
+        background-color: $howto-container-bg-color;
     }
 }
-
