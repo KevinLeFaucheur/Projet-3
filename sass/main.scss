@@ -1,11 +1,13 @@
 // imports
+@import "./utils/variables";
 @import "./base/base";
 @import "./base/typography";
-@import "./utils/variables";
 @import "./utils/debug";
 @import "./layouts/footer";
 @import "./layouts/header";
 @import "./layouts/nav";
+@import "./components/buttons";
 @import "./pages/geolocate";
 @import "./pages/howto";
 @import "./pages/menu";
+@import "./pages/menu-heading";

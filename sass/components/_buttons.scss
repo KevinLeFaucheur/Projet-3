@@ -1,0 +1,19 @@
+.button {
+    padding: 4.5vw 5vw;
+    margin: 6vw 0;
+    color: white;
+    font-size: 4vw;
+    font-weight: 500;
+    background: $color-primary;
+    background: linear-gradient(0deg, $color-primary -20%, $color-secondary 120%);
+    border-style: none;
+    border-radius: 25px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.35);
+}
+
+#return__icon {
+    position: absolute;
+    left: 9%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
