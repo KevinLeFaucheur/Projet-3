@@ -5,12 +5,12 @@
     justify-content: center;
     align-items: center;
 
-    #geolocate__icon {
+    &__icon {
         margin-right: 4vw;
         justify-self: flex-start;
     }
 
-    #geolocate__text {
+    &__text {
         margin-right: 4vw;
     }
 }

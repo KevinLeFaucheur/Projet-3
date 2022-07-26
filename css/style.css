@@ -96,24 +96,24 @@ nav .button {
   justify-content: center;
   align-items: center;
 }
-#geolocate #geolocate__icon {
+#geolocate__icon {
   margin-right: 4vw;
   justify-self: flex-start;
 }
-#geolocate #geolocate__text {
+#geolocate__text {
   margin-right: 4vw;
 }
 
-#how-to {
+.howto {
   background-color: white;
   padding: 5vw 5vw 13vw 5vw;
   position: relative;
 }
-#how-to h2 {
+.howto h2 {
   text-align: left;
   padding: 8vw 0;
 }
-#how-to .how-to__container {
+.howto__container {
   padding: 6vw;
   margin-left: 3vw;
   margin-bottom: 7vw;
@@ -122,7 +122,7 @@ nav .button {
   display: flex;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
 }
-#how-to .how-to__container .how-to__number {
+.howto__number {
   width: 3.6vw;
   height: 3.6vw;
   position: relative;
@@ -135,7 +135,7 @@ nav .button {
   justify-content: center;
   align-items: center;
 }
-#how-to .how-to__container .how-to__icon {
+.howto__icon {
   color: #7E7E7E;
   margin-right: 5vw;
   position: relative;
@@ -144,17 +144,17 @@ nav .button {
   display: flex;
   align-items: center;
 }
-#how-to .how-to__container .how-to__icon--alt {
+.howto__icon--alt {
   color: #9356DC;
 }
-#how-to .how-to__container .how-to__text {
+.howto__text {
   position: relative;
   right: 5vw;
   font-weight: 500;
   display: flex;
   align-items: center;
 }
-#how-to .how-to__container--alt {
+.howto__container--alt {
   background-color: #F5EDFF;
 }
 
@@ -181,14 +181,13 @@ nav .button {
   width: 100%;
   text-decoration: none;
 }
-#menu .menu-card .menu-card__image {
+#menu .menu-card__image {
   border-radius: 15px 15px 0 0;
   height: 70%;
 }
-#menu .menu-card .menu-card__new {
+#menu .menu-card__new {
   background-color: #99E2D0;
   color: #278870;
-  width: min-content;
   padding: 2vw;
   font-size: 3.5vw;
   font-weight: 500;
@@ -196,20 +195,16 @@ nav .button {
   top: 3.5vw;
   right: 3.5vw;
 }
-#menu .menu-card .menu-card__body {
+#menu .menu-card__body {
   display: flex;
   justify-content: space-between;
   text-align: left;
 }
-#menu .menu-card .menu-card__text {
-  display: flex;
-  flex-direction: column;
-}
-#menu .menu-card .menu-card__text h3 {
+#menu .menu-card__text h3 {
   padding: 3vw 3vw 0 3vw;
   margin-bottom: 1vw;
 }
-#menu .menu-card .menu-card__text p {
+#menu .menu-card__text p {
   padding: 0 3vw 3vw 3vw;
 }
 #menu .menu-card i {
