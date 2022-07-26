@@ -1,0 +1,21 @@
+.menu-board {
+    background-image: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-size: cover;
+    height: 81vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &__header {
+        background-color: $main-bg-color;
+        border-radius: 40px 40px 0 0;
+        padding: 3vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    i {
+        font-size: 6vw;
+        padding: 5vw;
+    }
+}
