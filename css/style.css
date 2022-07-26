@@ -15,6 +15,11 @@ a {
   color: black;
 }
 
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -155,6 +160,61 @@ nav .button {
 
 #menu {
   background-color: #F6F6F6;
+  padding: 5vw;
+}
+#menu h2 {
+  text-align: left;
+  margin-top: 10vw;
+  margin-bottom: 6vw;
+}
+#menu .menu-card {
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 5vw;
+  height: 66vw;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+}
+#menu .menu-card a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+#menu .menu-card .menu-card__image {
+  border-radius: 15px 15px 0 0;
+  height: 70%;
+}
+#menu .menu-card .menu-card__new {
+  background-color: #99E2D0;
+  color: #278870;
+  width: min-content;
+  padding: 2vw;
+  font-size: 3.5vw;
+  font-weight: 500;
+  position: absolute;
+  top: 3.5vw;
+  right: 3.5vw;
+}
+#menu .menu-card .menu-card__body {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+#menu .menu-card .menu-card__text {
+  display: flex;
+  flex-direction: column;
+}
+#menu .menu-card .menu-card__text h3 {
+  padding: 3vw 3vw 0 3vw;
+  margin-bottom: 1vw;
+}
+#menu .menu-card .menu-card__text p {
+  padding: 0 3vw 3vw 3vw;
+}
+#menu .menu-card i {
+  font-size: 6vw;
+  padding: 5vw;
 }
 
 /*# sourceMappingURL=style.css.map */
