@@ -17,6 +17,7 @@ h1 {
 
 a {
   color: black;
+  text-decoration: none;
 }
 
 img {
@@ -54,6 +55,9 @@ footer h3 {
 #footer__list li {
   margin-bottom: 2.3vw;
 }
+#footer__list a {
+  color: white;
+}
 
 header {
   position: relative;
@@ -74,16 +78,35 @@ nav p {
 }
 
 .button {
+  position: relative;
   padding: 4.5vw 5vw;
   margin: 6vw 0;
   color: white;
   font-size: 4vw;
   font-weight: 500;
-  background: #9356DC;
-  background: linear-gradient(0deg, #9356DC -20%, #FF79DA 120%);
   border-style: none;
   border-radius: 25px;
+  background: linear-gradient(0deg, #9356DC -20%, #FF79DA 120%);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.35);
+  transition: box-shadow 0.2s ease-in-out;
+  z-index: 1;
+}
+.button:hover::after {
+  opacity: 1;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  background: linear-gradient(0deg, #9356DC -50%, #FF79DA 80%);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 #return__icon {
@@ -182,7 +205,6 @@ nav p {
   display: block;
   height: 100%;
   width: 100%;
-  text-decoration: none;
 }
 #menu .menu-card__image {
   border-radius: 15px 15px 0 0;
@@ -233,6 +255,54 @@ nav p {
 .menu-board i {
   font-size: 6vw;
   padding: 5vw;
+}
+
+.menu-category {
+  text-align: left;
+  padding: 3vw;
+}
+.menu-category h2 {
+  font-size: 4.5vw;
+  font-weight: 300;
+  margin: 1vw 0;
+}
+.menu-category__separator {
+  display: block;
+  background-color: #99E2D0;
+  height: 3px;
+  width: 40px;
+  margin-bottom: 3vw;
+}
+.menu-category__entry {
+  background-color: white;
+  border-radius: 15px;
+  height: 17vw;
+  margin-bottom: 4vw;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+}
+.menu-category__text {
+  position: relative;
+  display: block;
+  padding: 3vw;
+  width: 100%;
+}
+.menu-category__price {
+  position: absolute;
+  bottom: 3vw;
+  right: 5vw;
+}
+.menu-category__check {
+  background-color: #99E2D0;
+  color: white;
+  font-size: 6vw;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  flex-basis: 20%;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
