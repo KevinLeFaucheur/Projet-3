@@ -305,4 +305,45 @@ nav p {
   align-items: center;
 }
 
+.fadein {
+  animation: fade-in 1000ms ease-in-out both;
+}
+.fadein--1 {
+  animation-delay: 500ms;
+}
+.fadein--2 {
+  animation-delay: 1000ms;
+}
+.fadein--3 {
+  animation-delay: 1500ms;
+}
+.fadein--4 {
+  animation-delay: 2000ms;
+}
+.fadein--5 {
+  animation-delay: 2500ms;
+}
+.fadein--6 {
+  animation-delay: 3000ms;
+}
+.fadein--7 {
+  animation-delay: 3500ms;
+}
+.fadein--8 {
+  animation-delay: 4000ms;
+}
+.fadein--9 {
+  animation-delay: 4500ms;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
