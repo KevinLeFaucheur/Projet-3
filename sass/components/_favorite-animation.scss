@@ -1,0 +1,28 @@
+.menu-board__icon {
+    
+    &--anim {
+        transform: scaleY(0);
+    }
+}
+
+.menu-board__icon-parent:hover {
+    .menu-board__icon--anim {
+        animation: favorite 300ms ease-in-out both;
+    }
+}
+
+@keyframes favorite {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    80% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}

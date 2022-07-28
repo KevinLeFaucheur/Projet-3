@@ -251,10 +251,23 @@ nav p {
   padding: 3vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.menu-board i {
+
+.menu-board__icon-parent {
+  position: relative;
+  height: 6vw;
+}
+
+.menu-board__icon {
   font-size: 6vw;
-  padding: 5vw;
+}
+.menu-board__icon--anim {
+  font-size: 6vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #9356DC;
 }
 
 .menu-category {
@@ -279,28 +292,38 @@ nav p {
   height: 17vw;
   margin-bottom: 4vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 .menu-category__text {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
   padding: 3vw;
-  width: 100%;
+  width: 60%;
+}
+.menu-category h3, .menu-category p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-category__price {
-  position: absolute;
-  bottom: 3vw;
-  right: 5vw;
+  display: flex;
+  align-items: flex-end;
+  width: min-content;
+  padding: 3vw;
 }
 .menu-category__check {
   background-color: #99E2D0;
   color: white;
   font-size: 6vw;
+  width: 20vw;
   height: 100%;
-  border-radius: 0 15px 15px 0;
   display: flex;
-  flex-basis: 20%;
+  flex-shrink: 1;
   justify-content: center;
   align-items: center;
 }
@@ -343,6 +366,52 @@ nav p {
   }
   100% {
     opacity: 1;
+  }
+}
+.menu-category__check {
+  overflow: hidden;
+  transform: translateX(20vw);
+  transition: transform 400ms ease-in-out;
+}
+.menu-category__check > .menu-category__icon {
+  transform: rotate(180deg);
+  transition: transform 400ms ease-in-out;
+}
+
+.menu-category__price {
+  transform: translateX(20vw);
+  transition: transform 400ms ease-in-out;
+}
+
+.menu-category__entry:hover > .menu-category__check {
+  transform: translateX(0);
+}
+.menu-category__entry:hover > .menu-category__check > .menu-category__icon {
+  transform: rotate(0deg);
+}
+.menu-category__entry:hover > .menu-category__price {
+  transform: translateX(0);
+}
+
+.menu-board__icon--anim {
+  transform: scaleY(0);
+}
+
+.menu-board__icon-parent:hover .menu-board__icon--anim {
+  animation: favorite 300ms ease-in-out both;
+}
+
+@keyframes favorite {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
 
