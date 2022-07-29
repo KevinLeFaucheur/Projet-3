@@ -1,4 +1,4 @@
-// COLORS
+// Colors
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
@@ -11,6 +11,30 @@ $howto-container-bg-color: #F5EDFF;
 $menu-new-font-color: darken($color-tertiary, 20%);
 $footer-bg-color: #353535;
 
-// ANIMATIONS
+// Animations
 $num-dishes: 9;
 $anim-delay: 500ms;
+
+// Breakpoints
+$breakpoints: (
+    tablet: 768px,
+    desktop: 992px,
+);
+
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, desktop - 0.01px)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
