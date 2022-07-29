@@ -11,12 +11,12 @@
     animation: loaded 0s linear 3000ms 1 forwards;
 
     &__icon {
+        position: relative;
         display: block;
         color: $color-primary;
         font-size: 20vw;
-        left: 50vw;
-        top: 50vh;
-        margin-top: 40vh;
+        left: 0;
+        top: calc(50% - 10vw);
         animation: spinner 1000ms ease-out 3;
     }
 }
