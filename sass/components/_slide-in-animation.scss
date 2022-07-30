@@ -1,8 +1,10 @@
-$width: 20vw;
+.menu-category__text{
+    margin-right: -4rem;
+    transition: margin-right 400ms ease-in-out;
+}
 
 .menu-category__check {
-    overflow: hidden;
-    transform: translateX($width);
+    transform: translateX(100%);
     transition: transform 400ms ease-in-out;
 
     & > .menu-category__icon {
@@ -12,13 +14,17 @@ $width: 20vw;
 }
 
 .menu-category__price {
-    transform: translateX($width);
+    transform: translateX(100%);
     transition: transform 400ms ease-in-out;
 }
 
 .menu-category__entry {
 
     &:hover {
+
+        .menu-category__text{
+            margin-right: 0;
+        }
 
         & > .menu-category__check {
             transform: translateX(0);
@@ -33,7 +39,7 @@ $width: 20vw;
         }
 
         h3, p {
-            width: 80vw - $width;
+            // width: 80vw - $width - 1vw;
         }
     }
 }

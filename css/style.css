@@ -288,9 +288,9 @@ nav p {
   flex-direction: column;
   justify-content: flex-end;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .menu-board {
-    height: 40rem;
+    height: 30rem;
   }
 }
 .menu-board__header {
@@ -352,36 +352,34 @@ nav p {
   justify-content: flex-start;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  max-width: 100%;
 }
 .menu-category__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
-  flex-shrink: 1;
-  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
   padding: 0.75rem;
-  width: 48vw;
 }
 .menu-category h3, .menu-category p {
-  width: 80vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu-category__price {
   display: flex;
+  justify-content: flex-end;
   align-items: flex-end;
   width: min-content;
-  padding: 0.8rem;
+  padding: 0.75rem;
   font-weight: 500;
 }
 .menu-category__check {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   font-size: 1.4rem;
-  width: 20vw;
+  width: 4rem;
   height: 100%;
   background-color: #99E2D0;
   color: white;
@@ -417,6 +415,15 @@ nav p {
 .fadein--9 {
   animation-delay: 4500ms;
 }
+.fadein--10 {
+  animation-delay: 5000ms;
+}
+.fadein--11 {
+  animation-delay: 5500ms;
+}
+.fadein--12 {
+  animation-delay: 6000ms;
+}
 
 @keyframes fade-in {
   0% {
@@ -427,9 +434,13 @@ nav p {
     opacity: 1;
   }
 }
+.menu-category__text {
+  margin-right: -4rem;
+  transition: margin-right 400ms ease-in-out;
+}
+
 .menu-category__check {
-  overflow: hidden;
-  transform: translateX(20vw);
+  transform: translateX(100%);
   transition: transform 400ms ease-in-out;
 }
 .menu-category__check > .menu-category__icon {
@@ -438,10 +449,13 @@ nav p {
 }
 
 .menu-category__price {
-  transform: translateX(20vw);
+  transform: translateX(100%);
   transition: transform 400ms ease-in-out;
 }
 
+.menu-category__entry:hover .menu-category__text {
+  margin-right: 0;
+}
 .menu-category__entry:hover > .menu-category__check {
   transform: translateX(0);
 }
@@ -451,10 +465,6 @@ nav p {
 .menu-category__entry:hover > .menu-category__price {
   transform: translateX(0);
 }
-.menu-category__entry:hover h3, .menu-category__entry:hover p {
-  width: 60vw;
-}
-
 .favorite-icon--anim {
   transform: scaleY(0);
 }
