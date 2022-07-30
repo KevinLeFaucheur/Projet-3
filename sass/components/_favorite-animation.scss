@@ -1,12 +1,12 @@
-.menu-board__icon {
+.favorite-icon {
     
     &--anim {
         transform: scaleY(0);
     }
 }
 
-.menu-board__icon-parent:hover {
-    .menu-board__icon--anim {
+.favorite-icon-parent:hover {
+    .favorite-icon--anim {
         animation: favorite 300ms ease-in-out both;
     }
 }

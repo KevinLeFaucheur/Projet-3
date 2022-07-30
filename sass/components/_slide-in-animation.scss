@@ -2,7 +2,7 @@ $width: 20vw;
 
 .menu-category__check {
     overflow: hidden;
-    transform: translateX(20vw);
+    transform: translateX($width);
     transition: transform 400ms ease-in-out;
 
     & > .menu-category__icon {
@@ -12,7 +12,7 @@ $width: 20vw;
 }
 
 .menu-category__price {
-    transform: translateX(20vw);
+    transform: translateX($width);
     transition: transform 400ms ease-in-out;
 }
 
@@ -30,6 +30,10 @@ $width: 20vw;
 
         & > .menu-category__price {
             transform: translateX(0);
+        }
+
+        h3, p {
+            width: 80vw - $width;
         }
     }
 }

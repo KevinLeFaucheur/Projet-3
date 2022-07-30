@@ -1,19 +1,35 @@
-#menu {
-    padding: 5vw;
+.menu {
+    padding: 1rem 1rem 2.5rem 1rem;
+
+    &__container {
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
 
     h2 {
         text-align: left;
-        margin-top: 10vw;
-        margin-bottom: 6vw;
+        padding: 2rem 0 1.5rem 0;
     }
 
     .menu-card {
         position: relative;
         background-color: white;
         border-radius: 15px;
-        margin-bottom: 5vw;
-        height: 66vw;
+        margin-bottom: 1.3rem;
+        height: 16rem;
         box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+
+        @include tablet {
+            width: 49%;
+        }
+
+        @include desktop {
+            width: 49%;
+        }
 
         a {
             display: block;
@@ -27,14 +43,15 @@
         }
 
         &__new {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.4rem 0.7rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border-radius: 2px;
             background-color: $color-tertiary;
             color: darken($color-tertiary, 40%);
-            padding: 2vw;
-            font-size: 3.5vw;
-            font-weight: 500;
-            position: absolute;
-            top: 3.5vw;
-            right: 3.5vw;
         }
 
         &__body {
@@ -44,22 +61,18 @@
         }
 
         &__text {
-            // display: flex;
-            // flex-direction: column;
-
             h3 {
-                padding: 3vw 3vw 0 3vw;
-                margin-bottom: 1vw;
+                padding: 0.8rem 0 0 1rem;
             }
 
             p {
-                padding: 0 3vw 3vw 3vw;
+                padding: 0.2rem 0 1rem 1rem;
             }
         }
 
         i {
-            font-size: 6vw;
-            padding: 5vw;
+            font-size: 1.5rem;
+            padding: 1.5rem;
         }
     }
 }

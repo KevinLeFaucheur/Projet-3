@@ -1,50 +1,68 @@
+.menu-wrapper {
+    @include desktop {
+        display: flex;
+    }
+}
+
 .menu-board {
     background-image: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     background-size: cover;
-    height: 81vw;
+    background-position: 50% bottom;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
+    @include desktop {
+        height: 40rem;
+    }
+
     &__header {
         background-color: $main-bg-color;
         border-radius: 40px 40px 0 0;
-        padding: 3vw;
+        padding: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
+    h1 {
+        font-size: 2rem;
+        padding: 0.75rem;
+    }
 }
 
-.menu-board__icon-parent {
+.favorite-icon-parent {
     position: relative;
-    height: 6vw;
+    height: 1.5rem;
+    width: 3.5rem;
     // background-color: linear-gradient(0deg, $color-primary -20%, $color-secondary 120%);
 }
 
-.menu-board__icon {
-    font-size: 6vw;
-    // padding: 5vw;
+.favorite-icon {
+    font-size: 1.5rem;
 
     &--anim {
-        font-size: 6vw;
-        // padding: 5vw;
+        font-size: 1.5rem;
         position: absolute;
         top: 0;
-        left: 0;
+        // left: 0;
         color: $color-primary;
-        // transform-origin: 0 -1;
     }
 }
 
 .menu-category {
     text-align: left;
-    padding: 3vw;
+    padding: 1rem;
+
+    @include desktop {
+        width: 30%;
+    }
 
     h2 {
-        font-size: 4.5vw;
+        font-size: 1rem;
         font-weight: 300;
-        margin: 1vw 0;
+        margin: 0.5rem 0;
     }
 
     &__separator {
@@ -52,14 +70,14 @@
         background-color: $color-tertiary;
         height: 3px;
         width: 40px;
-        margin-bottom: 3vw;
+        margin-bottom: 1rem;
     }
 
     &__entry {
         background-color: white;
         border-radius: 15px;
-        height: 17vw;
-        margin-bottom: 4vw;
+        height: 4.2rem;
+        margin-bottom: 0.9rem;
         display: flex;
         justify-content: flex-start;
         box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
@@ -67,37 +85,43 @@
     }
 
     &__text {
-        position: relative;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         flex-grow: 1;
         flex-shrink: 1;
-        padding: 3vw;
-        width: 60%;
+        position: relative;
+        padding: 0.75rem;
+        width: 48vw;
     }
 
     h3, p {
+        width: 80vw;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        // @include desktop {
+        //     width: 80%;
+        // }
     }
 
     &__price {
         display: flex;
         align-items: flex-end;
         width: min-content;
-        padding: 3vw;
+        padding: 0.8rem;
+        font-weight: 500;
     }
 
     &__check {
-        background-color: $color-tertiary;
-        color: white;
-        font-size: 6vw;
-        width: 20vw;
-        height: 100%;
         display: flex;
-        flex-shrink: 1;
         justify-content: center;
         align-items: center;
+        font-size: 1.4rem;
+        width: 20vw;
+        height: 100%;
+        background-color: $color-tertiary;
+        color: white;
     }
 }

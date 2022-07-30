@@ -1,16 +1,16 @@
 #geolocate { 
     background-color: $geolocate-bg-color; 
-    height: 13vw;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    #geolocate__icon {
-        margin-right: 4vw;
-        justify-self: flex-start;
+    &__icon {
+        margin-right: 1rem;
     }
 
-    #geolocate__text {
-        margin-right: 4vw;
+    &__text {
+        margin-right: 1rem;
+        font-weight: 500;
     }
 }

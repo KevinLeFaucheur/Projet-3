@@ -25,7 +25,7 @@
              Sur les pages de menu, il contient en plus un bouton de retour vers la page d’accueil -->
         <header>
             <a href="#"><div id="return__icon" class="fa-solid fa-arrow-left fa-lg hidden"></div></a>
-            <h1 class="heading__font">ohmyfood</h1>
+            <img class="header__logo" src="./images/logo/ohmyfood.png" alt="ohmyfood-logo">
         </header>
 
         <main>
@@ -49,79 +49,96 @@
             <section class="howto">
                 <h2>Fonctionnement</h2>
 
-                <div class="howto__container">
-                    <div class="howto__number">1</div>
-                    <div class="fa-solid fa-mobile-screen-button fa-fw howto__icon"></div>
-                    <div class="howto__text">Choisissez un restaurant</div>
-                </div>
+                <div class="howto__wrapper">
+                    <div class="howto__container">
+                        <div class="howto__number">1</div>
+                        <div class="howto__icon fa-solid fa-mobile-screen-button fa-fw"></div>
+                        <div class="howto__text">Choisissez un restaurant</div>
+                    </div>
 
-                <div class="howto__container">
-                    <div class="howto__number">2</div>
-                    <div class="fa-solid fa-list-ul fa-fw howto__icon"></div>
-                    <div class="howto__text">Composez votre menu</div>
-                </div>
+                    <div class="howto__container">
+                        <div class="howto__number">2</div>
+                        <div class="howto__icon fa-solid fa-list-ul fa-fw"></div>
+                        <div class="howto__text">Composez votre menu</div>
+                    </div>
 
-                <div class="howto__container howto__container--alt">
-                    <div class="howto__number">3</div>
-                    <div class="fa-solid fa-store fa-fw howto__icon howto__icon--alt"></div>
-                    <div class="howto__text">Dégustez au restaurant</div>
+                    <div class="howto__container howto__container--alt">
+                        <div class="howto__number">3</div>
+                        <div class="howto__icon howto__icon--alt fa-solid fa-store fa-fw"></div>
+                        <div class="howto__text">Dégustez au restaurant</div>
+                    </div>
                 </div>
 
             </section>
 
             <!-- Restaurants -->
-            <section id="menu">
+            <section class="menu">
                 <h2>Restaurants</h2>
 
-                <div class="menu-card">
-                    <a href="./menus/a-la-francaise.html">
-                        <img class="menu-card__image" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                <div class="menu__container">
+                    <div class="menu-card">
+                        <a href="./menus/a-la-francaise.html">
+                            <img class="menu-card__image" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                            <div class="menu-card__new">Nouveau</div>
+                            <div class="menu-card__body">
+                                <div class="menu-card__text">
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                </div>                                
+                                <div class="favorite-icon-parent">
+                                    <i class="favorite-icon--anim fa-solid fa-heart"></i>
+                                    <i class="favorite-icon fa-regular fa-heart"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="menu-card">
+                        <img class="menu-card__image" src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
                         <div class="menu-card__new">Nouveau</div>
                         <div class="menu-card__body">
                             <div class="menu-card__text">
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>                            
+                            <div class="favorite-icon-parent">
+                                <i class="favorite-icon--anim fa-solid fa-heart"></i>
+                                <i class="favorite-icon fa-regular fa-heart"></i>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
                         </div>
-                    </a>
-                </div>
+                    </div>
 
-                <div class="menu-card">
-                    <img class="menu-card__image" src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-                    <div class="menu-card__new">Nouveau</div>
-                    <div class="menu-card__body">
-                        <div class="menu-card__text">
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
+                    <div class="menu-card">
+                        <img class="menu-card__image" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
+                        <div class="menu-card__new hidden">Nouveau</div>
+                        <div class="menu-card__body">
+                            <div class="menu-card__text">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>                            
+                            <div class="favorite-icon-parent">
+                                <i class="favorite-icon--anim fa-solid fa-heart"></i>
+                                <i class="favorite-icon fa-regular fa-heart"></i>
+                            </div>
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                    </div>
+
+                    <div class="menu-card">
+                        <img class="menu-card__image" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+                        <div class="menu-card__new hidden">Nouveau</div>
+                        <div class="menu-card__body">
+                            <div class="menu-card__text">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>                            
+                            <div class="favorite-icon-parent">
+                                <i class="favorite-icon--anim fa-solid fa-heart"></i>
+                                <i class="favorite-icon fa-regular fa-heart"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="menu-card">
-                    <img class="menu-card__image" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
-                    <div class="menu-card__new hidden">Nouveau</div>
-                    <div class="menu-card__body">
-                        <div class="menu-card__text">
-                            <h3>À la française</h3>
-                            <p>Cité Rouge</p>
-                        </div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
-
-                <div class="menu-card">
-                    <img class="menu-card__image" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
-                    <div class="menu-card__new hidden">Nouveau</div>
-                    <div class="menu-card__body">
-                        <div class="menu-card__text">
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
-                        </div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
             </section>
 
         </main>
