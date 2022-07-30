@@ -20,21 +20,3 @@ $breakpoints: (
     tablet: 768px,
     desktop: 992px,
 );
-
-@mixin tablet {
-    @media screen and (min-width: map-get($breakpoints, tablet)) {
-        @content;
-    }
-}
-
-@mixin tablet-only {
-    @media screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, desktop - 0.01px)) {
-        @content;
-    }
-}
-
-@mixin desktop {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
-        @content;
-    }
-}
