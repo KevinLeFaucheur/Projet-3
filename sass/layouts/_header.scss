@@ -10,11 +10,7 @@ header {
 
 #return__icon {
     position: absolute;
-    left: 9%;
+    left: 2rem;
     top: 50%;
     transform: translate(-50%, -50%);
-
-    @include desktop {
-        font-size: 3vw;
-    }
 }

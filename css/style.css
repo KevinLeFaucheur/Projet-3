@@ -71,14 +71,9 @@ header img {
 
 #return__icon {
   position: absolute;
-  left: 9%;
+  left: 2rem;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-@media screen and (min-width: 992px) {
-  #return__icon {
-    font-size: 3vw;
-  }
 }
 
 nav {
