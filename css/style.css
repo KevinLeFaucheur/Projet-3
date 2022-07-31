@@ -6,10 +6,6 @@ main {
   background-color: #F6F6F6;
 }
 
-.hidden {
-  display: none;
-}
-
 h1 {
   font-size: 8vw;
   padding: 3.5vw 0 1.5vw 0;
@@ -26,12 +22,16 @@ img {
   object-position: 50% 60%;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
 }
 
-.heading__font, .menu-board__header {
+.heading__font {
   font-family: "Shrikhand", sans-serif;
 }
 
@@ -183,6 +183,7 @@ nav p {
 }
 .howto__icon {
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
   color: #7E7E7E;
@@ -228,11 +229,6 @@ nav p {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
 }
 @media screen and (min-width: 768px) {
-  .menu .menu-card {
-    width: 49%;
-  }
-}
-@media screen and (min-width: 992px) {
   .menu .menu-card {
     width: 49%;
   }
@@ -507,7 +503,7 @@ nav p {
   height: 100%;
   background: rgba(255, 255, 255, 0.8);
   z-index: 10;
-  animation: loaded 0s linear 3ms 1 forwards;
+  animation: loaded 0s linear 2000ms 1 forwards;
 }
 .spinner__icon {
   position: relative;
@@ -516,7 +512,7 @@ nav p {
   font-size: 20vw;
   left: 0;
   top: calc(50% - 10vw);
-  animation: spinner 1ms ease-out 3;
+  animation: spinner 1000ms ease-out 2;
 }
 
 @keyframes loaded {

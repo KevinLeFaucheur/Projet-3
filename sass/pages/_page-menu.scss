@@ -92,9 +92,7 @@
     }
 
     &__check {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         overflow: hidden;
         font-size: 1.4rem;
         width: 4rem;

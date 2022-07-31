@@ -2,7 +2,6 @@
     position: relative;
     height: 1.5rem;
     width: 3.5rem;
-    // background-color: linear-gradient(0deg, $color-primary -20%, $color-secondary 120%);
 }
 
 .favorite-icon {
@@ -14,7 +13,6 @@
         top: 0;
         // left: 0;
         color: $color-primary;
-        // background: -webkit-radial-gradient(33% 100% circle, #515ECF 4%, #9B36B7 30%, #D92E7F 62%, #F15245 85%, #FED373);
         background: linear-gradient(0deg, $color-primary -20%, $color-secondary 120%);
         background-clip: text;
         -webkit-background-clip: text;

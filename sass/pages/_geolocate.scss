@@ -1,9 +1,8 @@
 #geolocate { 
     background-color: $geolocate-bg-color; 
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    @include flex-center;
 
     &__icon {
         margin-right: 1rem;
