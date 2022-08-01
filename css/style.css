@@ -6,6 +6,15 @@ main {
   background-color: #F6F6F6;
 }
 
+@media screen and (min-width: 992px) {
+  .section-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 h1 {
   font-size: 8vw;
   padding: 3.5vw 0 1.5vw 0;
@@ -275,7 +284,10 @@ nav p {
 
 @media screen and (min-width: 992px) {
   .menu-wrapper {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
+    justify-content: center;
   }
 }
 

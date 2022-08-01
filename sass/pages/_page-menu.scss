@@ -1,6 +1,7 @@
 .menu-wrapper {
     @include desktop {
-        display: flex;
+        @include desktop-large;
+        justify-content: center;
     }
 }
 

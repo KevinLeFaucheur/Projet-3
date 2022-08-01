@@ -5,6 +5,12 @@
     align-items: center;
 }
 
+@mixin desktop-large {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
 // Breakpoints
 @mixin tablet {
     @media screen and (min-width: map-get($breakpoints, tablet)) {

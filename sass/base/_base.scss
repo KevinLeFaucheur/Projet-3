@@ -6,6 +6,13 @@ main {
     background-color: $main-bg-color;
 }
 
+.section-wrapper {
+    @include desktop {
+        @include desktop-large;
+        flex-direction: column;
+    }
+}
+
 h1 { 
     font-size: 8vw; 
     padding: 3.5vw 0 1.5vw 0;
