@@ -1,14 +1,12 @@
-.favorite-icon-parent {
-    position: relative;
-    height: 1.5rem;
-    width: 3.5rem;
-}
-
 .favorite-icon {
     font-size: 1.5rem;
+    padding: 1.5rem 0;
+    opacity: 1;
 
     &--anim {
         font-size: 1.5rem;
+        padding: 1.5rem 0;
+        transform: scale(0);
         position: absolute;
         top: 0;
         color: $color-primary;
@@ -19,24 +17,20 @@
     }
 }
 
-/////
-.favorite-icon {
-    opacity: 1;
-    
-    &--anim {
-        transform: scale(0);
-    }
-}
+.favorite-icon-parent {
+    position: relative;
+    width: 1.5rem;
+    margin-right: 1rem;
 
-.favorite-icon-parent:hover {
-    .favorite-icon {
-        animation: favorite2 300ms cubic-bezier(1,0,.97,.81) forwards;
+    &:hover {
+        .favorite-icon {
+            animation: favorite2 300ms cubic-bezier(1,0,.97,.81) forwards;
 
-    }
+        }
 
-    .favorite-icon--anim {
-        transform-origin: 50% 50%;
-        animation: favorite 300ms cubic-bezier(.6,.65,.32,.94) both;
+        .favorite-icon--anim {
+            animation: favorite 300ms cubic-bezier(.6,.65,.32,.94) both;
+        }
     }
 }
 

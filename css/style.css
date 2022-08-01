@@ -277,10 +277,6 @@ nav p {
 .menu .menu-card__text p {
   padding: 0.2rem 0 1rem 1rem;
 }
-.menu .menu-card i {
-  font-size: 1.5rem;
-  padding: 1.5rem;
-}
 
 @media screen and (min-width: 992px) {
   .menu-wrapper {
@@ -294,8 +290,8 @@ nav p {
 .menu-board {
   background-image: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
-  background-position: 50% bottom;
-  height: 20rem;
+  background-position: 50% top;
+  height: 19rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -308,7 +304,7 @@ nav p {
 .menu-board__header {
   background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
-  padding: 1rem;
+  padding: 1rem 1rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -330,7 +326,7 @@ nav p {
 .menu-category h2 {
   font-size: 1rem;
   font-weight: 300;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 .menu-category__separator {
   display: block;
@@ -461,17 +457,15 @@ nav p {
 .menu-category__entry:hover > .menu-category__price {
   transform: translateX(0);
 }
-.favorite-icon-parent {
-  position: relative;
-  height: 1.5rem;
-  width: 3.5rem;
-}
-
 .favorite-icon {
   font-size: 1.5rem;
+  padding: 1.5rem 0;
+  opacity: 1;
 }
 .favorite-icon--anim {
   font-size: 1.5rem;
+  padding: 1.5rem 0;
+  transform: scale(0);
   position: absolute;
   top: 0;
   color: #9356DC;
@@ -481,18 +475,15 @@ nav p {
   -webkit-text-fill-color: transparent;
 }
 
-.favorite-icon {
-  opacity: 1;
+.favorite-icon-parent {
+  position: relative;
+  width: 1.5rem;
+  margin-right: 1rem;
 }
-.favorite-icon--anim {
-  transform: scale(0);
-}
-
 .favorite-icon-parent:hover .favorite-icon {
   animation: favorite2 300ms cubic-bezier(1, 0, 0.97, 0.81) forwards;
 }
 .favorite-icon-parent:hover .favorite-icon--anim {
-  transform-origin: 50% 50%;
   animation: favorite 300ms cubic-bezier(0.6, 0.65, 0.32, 0.94) both;
 }
 

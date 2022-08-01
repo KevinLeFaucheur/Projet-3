@@ -8,8 +8,8 @@
 .menu-board {
     background-image: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     background-size: cover;
-    background-position: 50% bottom;
-    height: 20rem;
+    background-position: 50% top;
+    height: 19rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -21,7 +21,7 @@
     &__header {
         background-color: $main-bg-color;
         border-radius: 40px 40px 0 0;
-        padding: 1rem;
+        padding: 1rem 1rem 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -44,7 +44,7 @@
     h2 {
         font-size: 1rem;
         font-weight: 300;
-        margin: 0.5rem 0;
+        margin: 0.3rem 0;
     }
 
     &__separator {
