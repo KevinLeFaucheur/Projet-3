@@ -503,38 +503,219 @@ nav p {
   height: 100%;
   background: rgba(255, 255, 255, 0.8);
   z-index: 10;
-  animation: loaded 0s linear 2000ms 1 forwards;
-}
-.spinner__icon {
-  position: relative;
-  display: block;
-  color: #9356DC;
-  font-size: 20vw;
-  left: 0;
-  top: calc(50% - 10vw);
-  animation: spinner 1000ms ease-out 2;
+  animation: loaded 0s linear 3000ms 1 forwards;
 }
 
-@keyframes loaded {
+.holder {
+  z-index: 10;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+}
+.holder__inner--1 {
+  position: absolute;
+  box-sizing: border-box;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  width: calc(80px - (1 - 1) * 20px);
+  height: calc(80px - (1 - 1) * 20px);
+  border: 8px solid #9356DC;
+  margin: calc(((1) - 1) * 10px);
+  border-radius: 50%;
+  animation: spinner2 3000ms linear infinite both;
+  animation-delay: calc(-1s + 1 * 100ms);
+}
+.holder__inner--2 {
+  position: absolute;
+  box-sizing: border-box;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  width: calc(80px - (2 - 1) * 20px);
+  height: calc(80px - (2 - 1) * 20px);
+  border: 8px solid #9356DC;
+  margin: calc(((2) - 1) * 10px);
+  border-radius: 50%;
+  animation: spinner2 3000ms linear infinite both;
+  animation-delay: calc(-1s + 2 * 100ms);
+}
+.holder__inner--3 {
+  position: absolute;
+  box-sizing: border-box;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  width: calc(80px - (3 - 1) * 20px);
+  height: calc(80px - (3 - 1) * 20px);
+  border: 8px solid #9356DC;
+  margin: calc(((3) - 1) * 10px);
+  border-radius: 50%;
+  animation: spinner2 3000ms linear infinite both;
+  animation-delay: calc(-1s + 3 * 100ms);
+}
+
+.shape {
+  transition: width 0.5s, height 0.5s;
+  animation: spinner 6000ms linear infinite;
+  transform-origin: 40px 40px;
+}
+
+.shape:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: -4px 0 0 -4px;
+}
+
+.shape:nth-child(1) {
+  animation-delay: -375ms;
+  opacity: 0.5;
+}
+.shape:nth-child(3n):after {
+  background: #9356DC;
+}
+.shape:nth-child(3n+1):after {
+  background: #FF79DA;
+}
+.shape:nth-child(3n+2):after {
+  background: #99E2D0;
+}
+
+.shape:nth-child(2) {
+  animation-delay: -750ms;
+  opacity: 0.75;
+}
+.shape:nth-child(3n):after {
+  background: #9356DC;
+}
+.shape:nth-child(3n+1):after {
+  background: #FF79DA;
+}
+.shape:nth-child(3n+2):after {
+  background: #99E2D0;
+}
+
+.shape:nth-child(3) {
+  animation-delay: -1125ms;
+  opacity: 0.8333333333;
+}
+.shape:nth-child(3n):after {
+  background: #9356DC;
+}
+.shape:nth-child(3n+1):after {
+  background: #FF79DA;
+}
+.shape:nth-child(3n+2):after {
+  background: #99E2D0;
+}
+
+.shape:nth-child(4) {
+  animation-delay: -1500ms;
+  opacity: 0.875;
+}
+.shape:nth-child(3n):after {
+  background: #9356DC;
+}
+.shape:nth-child(3n+1):after {
+  background: #FF79DA;
+}
+.shape:nth-child(3n+2):after {
+  background: #99E2D0;
+}
+
+.shape:nth-child(5) {
+  animation-delay: -1875ms;
+  opacity: 0.9;
+}
+.shape:nth-child(3n):after {
+  background: #9356DC;
+}
+.shape:nth-child(3n+1):after {
+  background: #FF79DA;
+}
+.shape:nth-child(3n+2):after {
+  background: #99E2D0;
+}
+
+.shape:nth-child(6) {
+  animation-delay: -2250ms;
+  opacity: 0.9166666667;
+}
+.shape:nth-child(3n):after {
+  background: #9356DC;
+}
+.shape:nth-child(3n+1):after {
+  background: #FF79DA;
+}
+.shape:nth-child(3n+2):after {
+  background: #99E2D0;
+}
+
+.shape:nth-child(7) {
+  animation-delay: -2625ms;
+  opacity: 0.9285714286;
+}
+.shape:nth-child(3n):after {
+  background: #9356DC;
+}
+.shape:nth-child(3n+1):after {
+  background: #FF79DA;
+}
+.shape:nth-child(3n+2):after {
+  background: #99E2D0;
+}
+
+.shape:nth-child(8) {
+  animation-delay: -3000ms;
+  opacity: 0.9375;
+}
+.shape:nth-child(3n):after {
+  background: #9356DC;
+}
+.shape:nth-child(3n+1):after {
+  background: #FF79DA;
+}
+.shape:nth-child(3n+2):after {
+  background: #99E2D0;
+}
+
+@keyframes spinner2 {
+  0% {
+    border: 8px solid #9356DC;
+  }
+  25% {
+    border: 8px solid #FF79DA;
+  }
+  50% {
+    border: 8px solid #99E2D0;
+  }
+  75% {
+    border: 8px solid #FF79DA;
+  }
   100% {
-    left: 100%;
-    overflow: hidden;
-    visibility: hidden;
+    border: 8px solid #9356DC;
   }
 }
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
   }
-  70% {
-    transform: rotate(160deg);
-  }
-  80% {
-    transform: rotate(240deg);
+  50% {
+    transform: rotate(360deg);
   }
   100% {
-    transform: rotate(360deg);
-    transition-timing-function: ease-out;
+    transform: rotate(720deg);
+  }
+}
+@keyframes loaded {
+  100% {
+    left: 100%;
+    overflow: hidden;
+    visibility: hidden;
   }
 }
 
