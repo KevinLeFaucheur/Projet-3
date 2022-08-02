@@ -288,7 +288,6 @@ nav p {
 }
 
 .menu-board {
-  background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
   background-position: 50% top;
   height: 19rem;
@@ -375,6 +374,10 @@ nav p {
   height: 100%;
   background-color: #99E2D0;
   color: white;
+}
+
+.a-la-francaise {
+  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 
 .fadein {
