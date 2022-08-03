@@ -6,6 +6,12 @@
         @include tablet {
             display: flex;
             justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include desktop {
+            flex-direction: row;
             flex-wrap: wrap;
         }
     }
@@ -28,7 +34,11 @@
             transition: 300ms ease-out;
         }
 
-        @include tablet {
+        @include tablet-only {
+            width: 70vw;
+        }
+
+        @include desktop {
             width: 49%;
         }
 
@@ -47,7 +57,7 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
-            padding: 0.4rem 0.7rem;
+            padding: 0.1rem 0.8rem;
             font-size: 0.8rem;
             font-weight: 500;
             border-radius: 2px;

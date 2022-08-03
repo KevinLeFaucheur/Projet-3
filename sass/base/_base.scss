@@ -2,11 +2,22 @@
     margin: 0;
 }
 
+body {
+    height: 100vh;
+    animation: noscroll 9000ms forwards;
+}
+
 main {
     background-color: $main-bg-color;
 }
 
 .section-wrapper {
+    @include tablet-only {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     @include desktop {
         @include desktop-large;
         flex-direction: column;
@@ -30,3 +41,13 @@ img {
 }
 
 .hidden { display: none; }
+
+@keyframes noscroll {
+    // 0% {
+    //     position: fixed;
+    // }
+
+    100% {
+        position: inherit;
+    }    
+}

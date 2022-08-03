@@ -1,21 +1,23 @@
+$slide-in-duration: 500ms;
+
 .menu-category__text{
     margin-right: -4rem;
-    transition: margin-right 400ms ease-in-out;
+    transition: margin-right $slide-in-duration ease-in-out;
 }
 
 .menu-category__check {
     transform: translateX(100%);
-    transition: transform 400ms ease-in-out;
+    transition: transform $slide-in-duration ease-in-out;
 
     & > .menu-category__icon {
-        transform: rotate(180deg);
-        transition: transform 400ms ease-in-out;
+        transform: rotate(-270deg);
+        transition: transform $slide-in-duration linear;
     }
 }
 
 .menu-category__price {
     transform: translateX(100%);
-    transition: transform 400ms ease-in-out;
+    transition: transform $slide-in-duration ease-in-out;
 }
 
 .menu-category__entry {
@@ -36,10 +38,6 @@
 
         & > .menu-category__price {
             transform: translateX(0);
-        }
-
-        h3, p {
-            // width: 80vw - $width - 1vw;
         }
     }
 }

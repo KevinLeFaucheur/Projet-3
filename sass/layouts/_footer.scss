@@ -4,6 +4,10 @@ footer {
     text-align: left;
     padding: 1.5rem 1.8rem 2rem 1.7rem;
 
+    @include tablet {
+        text-align: center;
+    }
+
     h3 {
         margin-bottom: 1rem;
     }

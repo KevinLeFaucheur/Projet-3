@@ -1,4 +1,10 @@
 // Mixins
+// Breakpoints
+$breakpoints: (
+    tablet: 768px,
+    desktop: 992px,
+);
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -19,7 +25,7 @@
 }
 
 @mixin tablet-only {
-    @media screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, desktop - 0.01px)) {
+    @media screen and (min-width: map-get($breakpoints, tablet)) and (max-width: calc(map-get($breakpoints, desktop) - 0.01px)) {
         @content;
     }
 }

@@ -21,9 +21,21 @@
         background-color: $main-bg-color;
         border-radius: 40px 40px 0 0;
         padding: 1rem 1rem 0;
+
+        @include tablet-only {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__wrapper {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+
+        @include tablet-only {
+            align-items: center;
+            width: 70vw;
+        }
     }
 
     h1 {
@@ -54,22 +66,31 @@
         margin-bottom: 1rem;
     }
 
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet-only {
+            align-items: center;
+        }
+    }
+
     &__entry {
+        display: flex;
+        justify-content: flex-start;
         background-color: white;
+        overflow: hidden;
         border-radius: 15px;
         height: 4.2rem;
         margin-bottom: 0.9rem;
-        display: flex;
-        justify-content: flex-start;
         box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
-        overflow: hidden;
-        max-width: 100%;
+        
+        @include tablet-only {
+            width: 70vw;
+        }
     }
 
     &__text {
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
         overflow: hidden;
         text-overflow: ellipsis;
         flex: 1; // grow and shrink

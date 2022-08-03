@@ -1,7 +1,7 @@
 .button {
     position: relative;
     padding: 1rem;
-    margin: 1.3rem;
+    margin: 1.3rem 0 1.3rem;
     color: white;
     font-size: 0.9rem;
     font-weight: 500;
@@ -14,6 +14,7 @@
 
     &--alt {
         padding: 1rem 3rem;
+        margin-bottom: 4.5rem;
     }
 
     &:hover {

@@ -2,10 +2,22 @@
   margin: 0;
 }
 
+body {
+  height: 100vh;
+  animation: noscroll 9000ms forwards;
+}
+
 main {
   background-color: #F6F6F6;
 }
 
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+  .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media screen and (min-width: 992px) {
   .section-wrapper {
     max-width: 1200px;
@@ -35,6 +47,11 @@ img {
   display: none;
 }
 
+@keyframes noscroll {
+  100% {
+    position: inherit;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -49,6 +66,11 @@ footer {
   color: white;
   text-align: left;
   padding: 1.5rem 1.8rem 2rem 1.7rem;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    text-align: center;
+  }
 }
 footer h3 {
   margin-bottom: 1rem;
@@ -101,7 +123,7 @@ nav p {
 .button {
   position: relative;
   padding: 1rem;
-  margin: 1.3rem;
+  margin: 1.3rem 0 1.3rem;
   color: white;
   font-size: 0.9rem;
   font-weight: 500;
@@ -114,6 +136,7 @@ nav p {
 }
 .button--alt {
   padding: 1rem 3rem;
+  margin-bottom: 4.5rem;
 }
 .button:hover::after {
   opacity: 1;
@@ -157,6 +180,11 @@ nav p {
   text-align: left;
   padding: 2rem 0 1.5rem 0;
 }
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+  .howto h2 {
+    text-align: center;
+  }
+}
 @media screen and (min-width: 992px) {
   .howto__wrapper {
     display: flex;
@@ -171,6 +199,13 @@ nav p {
   background-color: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+  .howto__container {
+    width: 70vw;
+    justify-content: center;
+    margin-right: 0;
+  }
 }
 @media screen and (min-width: 992px) {
   .howto__container {
@@ -190,6 +225,11 @@ nav p {
   background-color: #9356DC;
   border-radius: 5vw;
 }
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+  .howto__number {
+    right: 1rem;
+  }
+}
 .howto__icon {
   display: flex;
   justify-content: center;
@@ -199,6 +239,11 @@ nav p {
   margin-right: 1rem;
   right: 1rem;
   font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+  .howto__icon {
+    right: 0;
+  }
 }
 .howto__icon--alt {
   color: #9356DC;
@@ -211,6 +256,11 @@ nav p {
   right: 1rem;
   font-weight: 500;
 }
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+  .howto__text {
+    right: 0;
+  }
+}
 .howto__container--alt {
   background-color: #F5EDFF;
 }
@@ -222,6 +272,13 @@ nav p {
   .menu__container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu__container {
+    flex-direction: row;
     flex-wrap: wrap;
   }
 }
@@ -241,7 +298,12 @@ nav p {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.3);
   transition: 300ms ease-out;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+  .menu .menu-card {
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 992px) {
   .menu .menu-card {
     width: 49%;
   }
@@ -259,7 +321,7 @@ nav p {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  padding: 0.4rem 0.7rem;
+  padding: 0.1rem 0.8rem;
   font-size: 0.8rem;
   font-weight: 500;
   border-radius: 2px;
@@ -304,9 +366,22 @@ nav p {
   background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
   padding: 1rem 1rem 0;
+}
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+  .menu-board__header {
+    display: flex;
+    justify-content: center;
+  }
+}
+.menu-board__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+  .menu-board__wrapper {
+    align-items: center;
+    width: 70vw;
+  }
 }
 .menu-board h1 {
   font-size: 2rem;
@@ -334,16 +409,29 @@ nav p {
   width: 40px;
   margin-bottom: 1rem;
 }
+.menu-category__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+  .menu-category__wrapper {
+    align-items: center;
+  }
+}
 .menu-category__entry {
+  display: flex;
+  justify-content: flex-start;
   background-color: white;
+  overflow: hidden;
   border-radius: 15px;
   height: 4.2rem;
   margin-bottom: 0.9rem;
-  display: flex;
-  justify-content: flex-start;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  max-width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 991.99px) {
+  .menu-category__entry {
+    width: 70vw;
+  }
 }
 .menu-category__text {
   overflow: hidden;
@@ -443,21 +531,21 @@ nav p {
 }
 .menu-category__text {
   margin-right: -4rem;
-  transition: margin-right 400ms ease-in-out;
+  transition: margin-right 500ms ease-in-out;
 }
 
 .menu-category__check {
   transform: translateX(100%);
-  transition: transform 400ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 .menu-category__check > .menu-category__icon {
-  transform: rotate(180deg);
-  transition: transform 400ms ease-in-out;
+  transform: rotate(-270deg);
+  transition: transform 500ms linear;
 }
 
 .menu-category__price {
   transform: translateX(100%);
-  transition: transform 400ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 
 .menu-category__entry:hover .menu-category__text {
@@ -472,6 +560,7 @@ nav p {
 .menu-category__entry:hover > .menu-category__price {
   transform: translateX(0);
 }
+
 .favorite-icon {
   font-size: 1.5rem;
   padding: 1.5rem 0;
@@ -528,12 +617,13 @@ nav p {
 }
 .spinner {
   position: fixed;
+  overflow: hidden;
   padding: 0;
   margin: 0;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: rgba(255, 255, 255, 0.8);
   z-index: 10;
   animation: loaded 0s linear 3000ms 1 forwards;
