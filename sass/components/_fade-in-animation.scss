@@ -1,9 +1,12 @@
+$dish-count: 4;
+$fade-in-delay: 167ms;
+
 .fadein {
     animation: fade-in 1000ms ease-in-out both;
 
-    @for $i from 1 through $num-dishes {
+    @for $i from 1 through $dish-count {
         &--#{$i} {
-            animation-delay: $anim-delay * $i;
+            animation-delay: $fade-in-delay * $i;
         }
     }
 }

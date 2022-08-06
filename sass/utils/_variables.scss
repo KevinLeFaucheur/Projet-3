@@ -10,7 +10,5 @@ $howto-icon-color: #7E7E7E;
 $howto-container-bg-color: #F5EDFF;
 $menu-new-font-color: darken($color-tertiary, 20%);
 $footer-bg-color: #353535;
-
-// Animations
-$num-dishes: 12;
-$anim-delay: 500ms;
+$color-gradient: linear-gradient(0deg, $color-primary -20%, $color-secondary 120%);
+$color-gradient-lighten:  linear-gradient(0deg, lighten($color-primary, 10%) -20%, lighten($color-secondary, 10%) 120%);

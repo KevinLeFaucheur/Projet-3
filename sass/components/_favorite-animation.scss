@@ -10,7 +10,7 @@
         position: absolute;
         top: 0;
         color: $color-primary;
-        background: linear-gradient(0deg, $color-primary -20%, $color-secondary 120%);
+        background: $color-gradient;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -24,17 +24,17 @@
 
     &:hover {
         .favorite-icon {
-            animation: favorite2 300ms cubic-bezier(1,0,.97,.81) forwards;
+            animation: favorite-icon 300ms cubic-bezier(1,0,.97,.81) forwards;
 
         }
 
         .favorite-icon--anim {
-            animation: favorite 300ms cubic-bezier(.6,.65,.32,.94) both;
+            animation: favorite-anim 300ms cubic-bezier(.6,.65,.32,.94) both;
         }
     }
 }
 
-@keyframes favorite {
+@keyframes favorite-anim {
     0% {
         transform: scale(0);
         opacity: 0;
@@ -50,7 +50,7 @@
     }
 }
 
-@keyframes favorite2 {
+@keyframes favorite-icon {
     0% {
         opacity: 1;
     }
