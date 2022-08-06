@@ -2,9 +2,13 @@
     margin: 0;
 }
 
-body {
+body, html {
     height: 100vh;
-    animation: noscroll 9000ms forwards;
+    animation: no-scroll 3000ms backwards;
+}
+
+@keyframes no-scroll {
+    from, to { overflow: hidden; }    
 }
 
 main {
@@ -41,13 +45,3 @@ img {
 }
 
 .hidden { display: none; }
-
-@keyframes noscroll {
-    // 0% {
-    //     position: fixed;
-    // }
-
-    100% {
-        position: inherit;
-    }    
-}
