@@ -4,13 +4,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ohmyfood</title>
-        <!-- FontAwesome CDN -->        
+        <title>ohmyfood</title>      
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- style.css -->
         <link rel="stylesheet" href="../css/style.css">
-        <!-- Shikrhand -->
-        <!-- Roboto -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500&display=swap" rel="stylesheet"> 
@@ -23,140 +19,152 @@
              Sur la page d’accueil, il contient le logo du site.
              Sur les pages de menu, il contient en plus un bouton de retour vers la page d’accueil -->
         <header>
-            <a href="../index.html"><div id="return__icon" class="fa-solid fa-arrow-left fa-lg"></div></a>
+            <a href="../index.html"><nav id="return__icon" class="fa-solid fa-arrow-left fa-lg"></nav></a>
             <img class="header__logo" src="../images/logo/ohmyfood.png" alt="ohmyfood-logo">
         </header>
 
         <main>
 
-            <section class="menu-board menu-bord__img--1">
+            <section class="menu-board menu-board__img--1">
                 <div class="menu-board__header">
-                    <h1 class="heading__font">À la française</h1>
-                    <div class="favorite-icon-parent">
-                        <i class="favorite-icon--anim fa-solid fa-heart"></i>
-                        <i class="favorite-icon fa-regular fa-heart"></i>
+                    <div class="menu-board__wrapper">
+                        <h1 class="heading__font">La palette du goût</h1>
+                        <div class="favorite-icon-parent">
+                            <i class="favorite-icon--anim fa-solid fa-heart"></i>
+                            <i class="favorite-icon fa-regular fa-heart"></i>
+                        </div>
                     </div>
-                    
                 </div>
             </section>
 
             <div class="menu-wrapper">
                 <section class="menu-category">
 
-                    <h2>ENTRÉES</h2>
-                    <span class="menu-category__separator"></span>
+                    <div class="menu-category__container">
+                        <h2>ENTRÉES</h2>
+                        <span class="menu-category__separator"></span>
 
-                    <div class="menu-category__entry fadein fadein--1">
-                        <div class="menu-category__text">
-                            <h3>Tartare de poule acidulé</h3>
-                            <p>Aux zests d'orange</p>
+                        <!-- fadein--#{integer} 
+                        Un nombre entier en suffix permet de manipuler vvv son ordre d'apparition -->
+                        <div class="menu-category__entry fadein fadein--1">
+                            <div class="menu-category__text">
+                                <h3>Fricassée d'escargot</h3>
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <div class="menu-category__price">25€</div>
+                            <div class="menu-category__check hidden">
+                                <div class="menu-category__icon fa-solid fa-circle-check"></div>
+                            </div>
                         </div>
-                        <div class="menu-category__price">25€</div>
-                        <div class="menu-category__check hidden">
-                            <div class="menu-category__icon fa-solid fa-circle-check"></div>
+
+                        <div class="menu-category__entry fadein fadein--2">
+                            <div class="menu-category__text">
+                                <h3>Foie gras de canard mi-cuit</h3>
+                                <p>Et ses copeaux de truffe noire</p>
+                            </div>
+                            <div class="menu-category__price">35€</div>
+                            <div class="menu-category__check hidden">
+                                <div class="menu-category__icon fa-solid fa-circle-check"></div>
+                            </div>
+                        </div>
+
+                        <div class="menu-category__entry fadein fadein--3">
+                            <div class="menu-category__text">
+                                <h3>Oeuf au plat</h3>
+                                <p>Assaisonné à la truffe sur lit de caviar</p>
+                            </div>
+                            <div class="menu-category__price">20€</div>
+                            <div class="menu-category__check hidden">
+                                <div class="menu-category__icon fa-solid fa-circle-check"></div>
+                            </div>
                         </div>
                     </div>
+                </section>
 
-                    <div class="menu-category__entry fadein fadein--2">
-                        <div class="menu-category__text">
-                            <h3>Velouté de légumes d'antan</h3>
-                            <p>Carotte, panais, topinambour</p>
-                        </div>
-                        <div class="menu-category__price">35€</div>
-                        <div class="menu-category__check hidden">
-                            <div class="menu-category__icon fa-solid fa-circle-check"></div>
-                        </div>
-                    </div>
+                <section class="menu-category">
 
-                    <div class="menu-category__entry fadein fadein--3">
-                        <div class="menu-category__text">
-                            <h3>Soupe à l'oignon</h3>
-                            <p>Revisitée</p>
+                    <div class="menu-category__container">
+
+                        <h2>PLATS</h2>
+                        <span class="menu-category__separator"></span>
+
+                        <div class="menu-category__entry fadein fadein--1">
+                            <div class="menu-category__text">
+                                <h3>Filet de boeuf aux herbes</h3>
+                                <p>Accompagné de sa ribambelle de légumes</p>
+                            </div>
+                            <div class="menu-category__price">40€</div>
+                            <div class="menu-category__check hidden">
+                                <div class="menu-category__icon fa-solid fa-circle-check"></div>
+                            </div>
                         </div>
-                        <div class="menu-category__price">20€</div>
-                        <div class="menu-category__check hidden">
-                            <div class="menu-category__icon fa-solid fa-circle-check"></div>
+
+                        <div class="menu-category__entry fadein fadein--2">
+                            <div class="menu-category__text">
+                                <h3>Parmentier de queue de boeuf</h3>
+                                <p>À la truffe noire sur sa purée de panais</p>
+                            </div>
+                            <div class="menu-category__price">35€</div>
+                            <div class="menu-category__check hidden">
+                                <div class="menu-category__icon fa-solid fa-circle-check"></div>
+                            </div>
                         </div>
+
+                        <div class="menu-category__entry fadein fadein--3">
+                            <div class="menu-category__text">
+                                <h3>Filet de turbot</h3>
+                                <p>Aux agrumes</p>
+                            </div>
+                            <div class="menu-category__price">44€</div>
+                            <div class="menu-category__check hidden">
+                                <div class="menu-category__icon fa-solid fa-circle-check"></div>
+                            </div>
+                        </div>
+
                     </div>
 
                 </section>
 
                 <section class="menu-category">
 
-                    <h2>PLATS</h2>
-                    <span class="menu-category__separator"></span>
+                    <div class="menu-category__container">
 
-                    <div class="menu-category__entry fadein fadein--1">
-                        <div class="menu-category__text">
-                            <h3>Coquilles Saint-Jacques</h3>
-                            <p>Accompagnées d'une purée de panais</p>
-                        </div>
-                        <div class="menu-category__price">40€</div>
-                        <div class="menu-category__check hidden">
-                            <div class="menu-category__icon fa-solid fa-circle-check"></div>
-                        </div>
-                    </div>
+                        <h2>DESSERTS</h2>
+                        <span class="menu-category__separator"></span>
 
-                    <div class="menu-category__entry fadein fadein--2">
-                        <div class="menu-category__text">
-                            <h3>Magret de canard</h3>
-                            <p>Et parmentier de pommes de terre</p>
+                        <div class="menu-category__entry fadein fadein--1">
+                            <div class="menu-category__text">
+                                <h3>Paris-Brest</h3>
+                                <p>Revisité</p>
+                            </div>
+                            <div class="menu-category__price">18€</div>
+                            <div class="menu-category__check hidden">
+                                <div class="menu-category__icon fa-solid fa-circle-check"></div>
+                            </div>
                         </div>
-                        <div class="menu-category__price">35€</div>
-                        <div class="menu-category__check hidden">
-                            <div class="menu-category__icon fa-solid fa-circle-check"></div>
-                        </div>
-                    </div>
 
-                    <div class="menu-category__entry fadein fadein--3">
-                        <div class="menu-category__text">
-                            <h3>Pigeonneau d’Ille-et-Vilaine</h3>
-                            <p>Sur son lit de gnocchis aux légumes</p>
+                        <div class="menu-category__entry fadein fadein--2">
+                            <div class="menu-category__text">
+                                <h3>Macaron au chocolat d'exception</h3>
+                                <p>Et glace à la vanille de Madagascar</p>
+                            </div>
+                            <div class="menu-category__price">22€</div>
+                            <div class="menu-category__check hidden">
+                                <div class="menu-category__icon fa-solid fa-circle-check"></div>
+                            </div>
                         </div>
-                        <div class="menu-category__price">44€</div>
-                        <div class="menu-category__check hidden">
-                            <div class="menu-category__icon fa-solid fa-circle-check"></div>
-                        </div>
-                    </div>
 
-                </section>
+                        <div class="menu-category__entry fadein fadein--3">
+                            <div class="menu-category__text">
+                                <h3>Mousse au chocolat</h3>
+                                <p>Au piment d'Espelette et à la truffe noire</p>
+                            </div>
+                            <div class="menu-category__price">23€</div>
+                            <div class="menu-category__check hidden">
+                                <div class="menu-category__icon fa-solid fa-circle-check"></div>
+                            </div>
+                        </div>
 
-                <section class="menu-category">
-
-                    <h2>DESSERTS</h2>
-                    <span class="menu-category__separator"></span>
-
-                    <div class="menu-category__entry fadein fadein--1">
-                        <div class="menu-category__text">
-                            <h3>Pétales de violettes glacés</h3>
-                            <p>Et purée de noisettes</p>
-                        </div>
-                        <div class="menu-category__price">18€</div>
-                        <div class="menu-category__check hidden">
-                            <div class="menu-category__icon fa-solid fa-circle-check"></div>
-                        </div>
-                    </div>
-
-                    <div class="menu-category__entry fadein fadein--2">
-                        <div class="menu-category__text">
-                            <h3>Fondant au chocolat</h3>
-                            <p>Revisité</p>
-                        </div>
-                        <div class="menu-category__price">22€</div>
-                        <div class="menu-category__check hidden">
-                            <div class="menu-category__icon fa-solid fa-circle-check"></div>
-                        </div>
-                    </div>
-
-                    <div class="menu-category__entry fadein fadein--3">
-                        <div class="menu-category__text">
-                            <h3>Millefeuille croustillant</h3>
-                            <p>Myrtilles et pâte d’amande</p>
-                        </div>
-                        <div class="menu-category__price">23€</div>
-                        <div class="menu-category__check hidden">
-                            <div class="menu-category__icon fa-solid fa-circle-check"></div>
-                        </div>
                     </div>
 
                 </section>
@@ -170,16 +178,13 @@
         Le footer est identique sur toutes les pages.
         Au clic sur “Contact”, un renvoi vers une adresse mail est effectué. -->
         <footer>
-
-            <h3 class="heading__font">ohmyfood</h3>
-
+            <h3>ohmyfood</h3>
             <ul id="footer__list">
                 <li><a href="#"><i class="fa-solid fa-utensils fa-fw"></i>Proposer un restaurant</a></li>
                 <li><a href="#"><i class="fa-solid fa-handshake-angle fa-fw"></i>Devenir partenaire</a></li>
                 <li><a href="#">Mentions légales</a></li>
-                <li><a href="mailto: #">Contact</a></li>
+                <li><a href="mailto:#">Contact</a></li>
             </ul>
-
         </footer>
 
     </body>
