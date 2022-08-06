@@ -4,12 +4,7 @@
     
     @include flex-center;
 
-    &__icon {
+    &__icon, &__text {
         margin-right: 1rem;
-    }
-
-    &__text {
-        margin-right: 1rem;
-        font-weight: 500;
     }
 }

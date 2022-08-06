@@ -1,7 +1,6 @@
 .howto {
     background-color: white;
     padding: 1rem 1rem 2.5rem 1rem;
-    position: relative;
 
     h2 {
         text-align: left;
@@ -12,14 +11,14 @@
         }
     }
 
-    &__wrapper {
+    &__container {
         @include desktop {
             display: flex;
             justify-content: space-between;
         }
     }
 
-    &__container {
+    &__step{
         display: flex;
         align-items: center;
         padding: 1.5rem 1rem;
@@ -73,19 +72,15 @@
     }
 
     &__text {
-        display: flex;
-        align-items: center;
         position: relative;
-        width: max-content;
         right: 1rem;
-        font-weight: 500;
 
         @include tablet-only {
             right: 0;
         }
     }
 
-    &__container--alt {
+    &__step--alt {
         background-color: $howto-container-bg-color;
     }
 }

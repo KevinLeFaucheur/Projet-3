@@ -19,7 +19,7 @@
              Sur la page d’accueil, il contient le logo du site.
              Sur les pages de menu, il contient en plus un bouton de retour vers la page d’accueil -->
         <header>
-            <a href="#"><div id="return__icon" class="fa-solid fa-arrow-left fa-lg hidden"></div></a>
+            <a href="#"><nav id="return__icon" class="fa-solid fa-arrow-left fa-lg hidden"></nav></a>
             <img class="header__logo" src="./images/logo/ohmyfood.png" alt="ohmyfood-logo">
         </header>
 
@@ -58,20 +58,20 @@
                 <div class="section-wrapper">
                     <h2>Fonctionnement</h2>
 
-                    <div class="howto__wrapper">
-                        <div class="howto__container">
+                    <div class="howto__container">
+                        <div class="howto__step">
                             <div class="howto__number">1</div>
                             <div class="howto__icon fa-solid fa-mobile-screen-button fa-fw"></div>
                             <div class="howto__text">Choisissez un restaurant</div>
                         </div>
 
-                        <div class="howto__container">
+                        <div class="howto__step">
                             <div class="howto__number">2</div>
                             <div class="howto__icon fa-solid fa-list-ul fa-fw"></div>
                             <div class="howto__text">Composez votre menu</div>
                         </div>
 
-                        <div class="howto__container howto__container--alt">
+                        <div class="howto__step howto__step--alt">
                             <div class="howto__number">3</div>
                             <div class="howto__icon howto__icon--alt fa-solid fa-store fa-fw"></div>
                             <div class="howto__text">Dégustez au restaurant</div>
@@ -82,13 +82,13 @@
             </section>
 
             <!-- Restaurants -->
-            <section class="menu">
+            <section class="menu-list">
 
                 <div class="section-wrapper">
 
                     <h2>Restaurants</h2>
 
-                    <div class="menu__container">
+                    <div class="menu-list__container">
                         <div class="menu-card">
                             <a class="menu-card__link" href="./menus/la-palette-du-goût.html">
                                 <img class="menu-card__image" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
@@ -168,16 +168,13 @@
         Le footer est identique sur toutes les pages.
         Au clic sur “Contact”, un renvoi vers une adresse mail est effectué. -->
         <footer>
-
-            <h3 class="heading__font">ohmyfood</h3>
-
+            <h3>ohmyfood</h3>
             <ul id="footer__list">
                 <li><a href="#"><i class="fa-solid fa-utensils fa-fw"></i>Proposer un restaurant</a></li>
                 <li><a href="#"><i class="fa-solid fa-handshake-angle fa-fw"></i>Devenir partenaire</a></li>
                 <li><a href="#">Mentions légales</a></li>
                 <li><a href="mailto:#">Contact</a></li>
             </ul>
-
         </footer>
 
     </body>
