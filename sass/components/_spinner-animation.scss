@@ -1,9 +1,12 @@
 $shapes: 8;
-$anim-delay: 375ms;
-$inners: 3;
+$shapes-delay: 375ms;
+$inner-circles: 3;
 $border-size: 8px;
+$holder-size: 80px;
+$dot-size: 15px;
+$loading-duration: 2000ms;
 
-.spinner {
+.loading-spinner {
     position:fixed;
     overflow: hidden;
     padding:0;
@@ -11,118 +14,113 @@ $border-size: 8px;
     top:0;
     left:0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background:rgba(255, 255, 255, .8);
     z-index: 10;
-    animation: loaded 0s linear 3000ms 1 forwards;
-}
+    animation: loaded 0s linear $loading-duration 1 forwards;
 
-.holder {
-    z-index: 10;
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    left: calc(50% - 40px);
-    top: calc(50% - 40px);
-
-    &__inner {
-        @for $i from 1 through $inners {
+    .dots-container {
+        z-index: 10;
+        display: inline-block;
+        width: $holder-size;
+        height: $holder-size;
+        position: absolute;
+        left: calc(50% - $holder-size / 2);
+        top: calc(50% - $holder-size / 2);
+    }    
+    
+    .inner-circle {
+        @for $i from 1 through $inner-circles {
             &--#{$i} {
-            position: absolute;
-            box-sizing: border-box;
-            left: calc(50% - 40px);
-            top: calc(50% - 40px);
-            width: calc(80px - (#{$i} - 1) * 20px);
-            height: calc(80px - (#{$i} - 1) * 20px);
-            border: $border-size solid $color-primary;
-            margin: calc(((#{$i}) - 1) * 10px);
-            border-radius: 50%;
-            animation: spinner2 3000ms linear infinite both;
-            animation-delay: calc(-1s + #{$i} * 100ms);
+                position: absolute;
+                box-sizing: border-box;
+                left: calc(50% - $holder-size / 2);
+                top: calc(50% - $holder-size / 2);
+                width: calc($holder-size - (#{$i} - 1) * 20px);
+                height: calc($holder-size - (#{$i} - 1) * 20px);
+                border: $border-size solid $color-primary;
+                margin: calc(((#{$i}) - 1) * 10px);
+                border-radius: 50%;
+                animation: color-shuffle $loading-duration linear infinite both;
+                animation-delay: calc(-1s + #{$i} * 100ms);
             }
         }
     }
 }
 
-.shape {
+.dot-shape {
+    @for $i from 1 through $shapes {
+        &:nth-child(#{$i}) {
+            animation-delay: calc(($shapes-delay * $i * -1));
+            opacity: calc(1 - ((1 / $i) / 2));
+        }
+    }
+
+    &:nth-child(3n) {
+        &:after {
+        background: $color-primary;
+        }
+    }  
+
+    &:nth-child(3n+1) {
+        &:after {
+        background: $color-secondary;
+        }
+    }  
+
+    &:nth-child(3n+2) {
+        &:after {
+        background: $color-tertiary;
+        }
+    } 
+
     transition: width .5s, height .5s;
-    animation: spinner 6000ms linear infinite;
-    transform-origin: 40px 40px;
+    animation: spinning-dots 6000ms linear infinite;
+    transform-origin: calc($holder-size /2) calc($holder-size / 2);
 }
 
-.shape:after {
+.dot-shape::after {
     content: " ";
     display: block;
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: $dot-size;
+    height: $dot-size;
     border-radius: 50%;
     margin: -4px 0 0 -4px;
 }
 
-@for $i from 1 through $shapes {
-    .shape {
-        &:nth-child(#{$i}) {
-            animation-delay: calc(($anim-delay * $i * -1));
-            opacity: calc(1 - ((1 / $i) / 2));
-            //   &:hover {
-            //     // animation-play-state: paused;
-            //     // trnasition: perspective(200px) translateX(0px);
-            //   }
-        }
-
-        &:nth-child(3n) {
-            &:after {
-            // background: linear-gradient(0deg, $color-primary 0%-$i*10, $color-secondary 50%-$i*10, $color-tertiary 100%-$i*10);
-            background: $color-primary;
-            }
-        }  
-
-        &:nth-child(3n+1) {
-            &:after {
-            // background: linear-gradient(0deg, $color-primary 0%-$i*10, $color-secondary 50%-$i*10, $color-tertiary 100%-$i*10);
-            background: $color-secondary;
-            }
-        }  
-
-        &:nth-child(3n+2) {
-            &:after {
-            // background: linear-gradient(0deg, $color-primary 0%-$i*10, $color-secondary 50%-$i*10, $color-tertiary 100%-$i*10);
-            background: $color-tertiary;
-            }
-        }  
-    }
+#no-scroll {
+    height: 100vh;
+    animation: no-scroll $loading-duration backwards;
 }
 
-@keyframes spinner2 {
+@keyframes no-scroll {
+    from, to { overflow: hidden; }    
+}
+
+@keyframes color-shuffle {
     0% {
-        // opacity: 0.2;
         border: $border-size solid $color-primary;
     }
 
     25% {
-        // opacity: 1;
         border: $border-size solid $color-secondary;
     }
 
     50% {
-        // opacity: 0.2;
         border: $border-size solid $color-tertiary;
     }
 
     75% {
-        // opacity: 1;
         border: $border-size solid $color-secondary;
     }
 
     100% {
-        // opacity: 0.2;
         border: $border-size solid $color-primary;
     }
 }
 
-@keyframes spinner {
+@keyframes spinning-dots {
     0% {
         transform: rotate(0deg);
     }

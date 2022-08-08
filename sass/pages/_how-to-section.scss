@@ -38,6 +38,10 @@
         }
     }
 
+    &__step--alt {
+        background-color: $howto-container-bg-color;
+    }
+
     &__number {
         @include flex-center;
         position: relative;
@@ -74,13 +78,10 @@
     &__text {
         position: relative;
         right: 1rem;
+        font-weight: 500;
 
         @include tablet-only {
             right: 0;
         }
-    }
-
-    &__step--alt {
-        background-color: $howto-container-bg-color;
     }
 }

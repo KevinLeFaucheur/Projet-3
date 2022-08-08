@@ -2,15 +2,6 @@
     margin: 0;
 }
 
-body, html {
-    height: 100vh;
-    animation: no-scroll 3000ms backwards;
-}
-
-@keyframes no-scroll {
-    from, to { overflow: hidden; }    
-}
-
 main {
     background-color: $main-bg-color;
 }
