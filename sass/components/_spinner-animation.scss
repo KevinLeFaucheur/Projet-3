@@ -74,8 +74,7 @@ $loading-duration: 2000ms;
         }
     } 
 
-    transition: width .5s, height .5s;
-    animation: spinning-dots 6000ms linear infinite;
+    animation: spinning-dots 3000ms linear infinite;
     transform-origin: calc($holder-size /2) calc($holder-size / 2);
 }
 
@@ -125,12 +124,8 @@ $loading-duration: 2000ms;
         transform: rotate(0deg);
     }
 
-    50% {
-        transform: rotate(360deg);
-    }
-
     100% {
-        transform: rotate(720deg);
+        transform: rotate(360deg);
     }
 }
 
